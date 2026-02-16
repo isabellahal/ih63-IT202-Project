@@ -1,3 +1,9 @@
+-- Name: Isabella Hallak
+-- Date: February 15, 2026
+-- Course: IT202 / Section 02
+-- Assignment: Phase 1 Assignment: Login and Logout
+-- Email: ih63@njit.edu
+
 <?php
  function getDB($echo_mode = false) {
    $host = 'localhost';
