@@ -1,0 +1,38 @@
+POST http://localhost:3000/addcandlestype.test.php
+Content-Type: application/x-www-form-urlencoded
+
+candles_type_id=1
+&candles_type_code=SCNT
+&candles_type_name=Scented
+&candles_type_shelf_number=1
+###
+POST http://localhost:3000/addcandlestype.test.php
+Content-Type: application/x-www-form-urlencoded
+
+candles_type_id=2
+&candles_type_code=LED
+&candles_type_name=LED
+&candles_type_shelf_number=2
+###
+POST http://localhost:3000/addcandlestype.test.php
+Content-Type: application/x-www-form-urlencoded
+
+candles_type_id=3
+&candles_type_code=DECO
+&candles_type_name=Decorative
+&candles_type_shelf_number=3
+###
+GET http://localhost:3000/listcandlestype.test.php
+###
+POST http://localhost:3000/changecandlestype.test.php
+Content-Type: application/x-www-form-urlencoded
+
+candles_type_id=1
+&candles_type_code=DECO
+&candles_type_name=Decorative
+&candles_type_shelf_number=3
+###
+POST http://localhost:3000/removecandlestype.test.php
+Content-Type: application/x-www-form-urlencoded
+
+candles_type_id=1

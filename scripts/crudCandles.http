@@ -1,0 +1,32 @@
+POST http://localhost:3000/addcandles.test.php
+Content-Type: application/x-www-form-urlencoded
+
+candlesID=1
+&candlesCode=NILLA
+&candlesName=Vanilla
+&candlesDescription=Vanilla is a popular candle scent with many variations.
+&candlesSize=10 oz
+&candlesBurnTime=40h
+&candles_type_id=1
+&candlesBuyPrice=20.00
+&candlesSellPrice=25.00
+###
+GET http://localhost:3000/listcandles.test.php
+###
+POST http://localhost:3000/changecandles.test.php
+Content-Type: application/x-www-form-urlencoded
+
+candlesID=1
+&candlesCode=DECO
+&candlesName=Decorative
+&candlesDescription=Decorative candles usually come in various shapes, for aesthetic purposes.
+&candlesSize=28 oz
+&candlesBurnTime=45h
+&candles_type_id=3
+&candlesBuyPrice=75.00
+&candlesSellPrice=125.00
+###
+POST http://localhost:3000/removecandles.test.php
+Content-Type: application/x-www-form-urlencoded
+
+candlesID=1
