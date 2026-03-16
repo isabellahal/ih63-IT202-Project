@@ -24,6 +24,11 @@ class CandlesType
         $this->datetimeCreated = $datetimeCreated;
         $this->datetimeUpdated = $datetimeUpdated;
    }
+      function __toString()
+   {
+       $output = "<h2>$this->candlestypeID - $this->candlestypeCode, $this->candlestypeName, $this->candlesTypeShelfNumber</h2>\n";
+       return $output;
+   }
    static function findCandlesType($candlestypeID)
    {
        $db = getDB();
@@ -54,7 +59,7 @@ class CandlesType
        VALUES (?, ?, ?, ?)";
        $stmt = $db->prepare($query);
        $stmt->bind_param(
-           "issi",
+           "isss",
            $this->candlestypeID,    
            $this->candlestypeCode,   
            $this->candlestypeName,

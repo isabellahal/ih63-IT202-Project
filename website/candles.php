@@ -83,7 +83,7 @@ class Candles
        $query = "INSERT INTO candles VALUES (?, ?, ?, ?, ?, ?, ?, ?, ? , ?, ?)";
        $stmt = $db->prepare($query);
        $stmt->bind_param(
-           "issssissdss",
+           "isssssiddss",
            $this->candlesID,  
            $this->candlesCode,  
            $this->candlesName, 
@@ -131,7 +131,7 @@ class Candles
        }
    }
    
-   function updateItem()
+   function updateCandle()
    {
        $db = getDB();
        $query = "UPDATE candles SET candles_name= ?, " .
@@ -162,6 +162,37 @@ class Candles
        $result = $db->query($query);
        $db->close();
        return $result;
+   }
+
+static function getCandlesByType($candlestypeID)
+   {
+       $db = getDB();
+       $query = "SELECT * from candles where candles_type_id = $candlestypeID";
+       $result = $db->query($query);
+       if (mysqli_num_rows($result) > 0) {
+           $candles = array();
+           while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+               $candle = new Candles(
+                   $row['candles_id'],
+                   $row['candles_code'],
+                   $row['candles_name'],
+                   $row['candles_description'],
+                   $row['candles_size'],
+                   $row['candles_burn_time'],
+                   $row['candles_type_id'],
+                   $row['candles_buy_price'],
+                   $row['candles_sell_price'],
+                   $row['date_time_created'],
+                   $row['date_time_updated']
+               );
+               array_push($candles, $candle);
+           }
+           $db->close();
+           return $candles;
+       } else {
+           $db->close();
+           return NULL;
+       }
    }
 }
 ?>

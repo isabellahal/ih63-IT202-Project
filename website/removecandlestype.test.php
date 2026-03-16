@@ -2,7 +2,7 @@
 require_once("candlestype.php");
 $candlestypeID = $_POST['candles_type_id'];
 if ((trim($candlestypeID) == '') or (!is_numeric($candlestypeID))) {
-   echo "<h2>Sorry, you must enter a valid candle type ID</h2>\n";
+   echo "<h2>Sorry, you must enter a valid candle type</h2>\n";
 } else if (!CandlesType::findCandlesType($candlestypeID)) {
    echo "<h2>Sorry, A candle type with ID #$candlestypeID does not exist</h2>\n";
 } else {

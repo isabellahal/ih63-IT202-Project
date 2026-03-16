@@ -7,7 +7,8 @@ if ($candles) {
      $candleName = $candle->candlesName;
      $candleBuyPrice = $candle->candlesBuyPrice;
      $candleSellPrice = $candle->candlesSellPrice;
-     $option = $candleID . " - " . $candleName .  " - " . $candleBuyPrice .  " - " . $candleSellPrice;
+     $candleType = $candle->candlestypeID;
+     $option = $candleID . " - " . $candleName .  " - " . $candleType . " - " . $candleBuyPrice .  " - " . $candleSellPrice;
      echo "$option<br>";
   }
 } else {

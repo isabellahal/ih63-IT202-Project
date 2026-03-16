@@ -11,7 +11,8 @@ if ((trim($candlestypeID) == '') or (!is_numeric($candlestypeID))) {
    $type->candlestypeCode = $_POST['candles_type_code'];
    $type->candlestypeName = $_POST['candles_type_name'];
    $type->candlesTypeShelfNumber = $_POST['candles_type_shelf_number'];
-   $type->datetimeUpdated = date('Y-m-d H:i:s');
+   $type->datetimeCreated = date("D M j h:ia T Y");
+   $type->datetimeUpdated = date("D M j h:ia T Y");
    $result = $type->updateCandlesType();
    if ($result) {
        echo "<h2>Candle type $candlestypeID updated</h2>\n";

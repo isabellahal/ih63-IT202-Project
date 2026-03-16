@@ -35,4 +35,4 @@ candles_type_id=1
 POST http://localhost:3000/removecandlestype.test.php
 Content-Type: application/x-www-form-urlencoded
 
-candles_type_id=1
+candles_type_id=4

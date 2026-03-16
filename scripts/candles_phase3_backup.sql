@@ -47,7 +47,7 @@ CREATE TABLE `candles` (
 
 LOCK TABLES `candles` WRITE;
 /*!40000 ALTER TABLE `candles` DISABLE KEYS */;
-INSERT INTO `candles` VALUES (2,'FLAM','Flameless','This candle requires batteries.','1 oz','10,000h',2,2.00,2.40,'2026-02-28 16:10:06','2026-02-28 16:10:06');
+INSERT INTO `candles` VALUES (1,'NILLA','Vanilla','Vanilla is a popular candle scent with many variations.','10 oz','40h',1,20.00,25.00,'2026-03-16 02:15:47','2026-03-16 02:15:47'),(2,'FLAM','Flameless','This candle requires batteries.','1 oz','10,000h',2,2.00,3.00,'2026-03-16 07:53:29','2026-03-16 07:53:29'),(3,'LAV','Lavender','Lavender scents are very relaxing.','12 oz','45h',1,18.00,24.00,'2026-03-16 02:15:53','2026-03-16 02:15:53'),(4,'PEPP','Peppermint','Peppermint is usually a seasonal candle.','9 oz','39h',1,16.00,22.00,'2026-03-16 02:15:55','2026-03-16 02:15:55'),(5,'CIN','Cinnamon','Cinnamon is a warm and spicy scent.','10 oz','40h',1,17.00,23.00,'2026-03-16 02:15:56','2026-03-16 02:15:56'),(6,'ROSE','Rose','Rose scents are very fresh and romantic.','11 oz','42h',1,20.00,26.00,'2026-03-16 02:15:59','2026-03-16 02:15:59'),(7,'LEM','Lemon','Lemon candles are usually for spring and summer.','8 oz','35h',1,16.00,21.00,'2026-03-16 02:16:00','2026-03-16 02:16:00'),(8,'APPL','Apple','Apple candles give off a nice, fruity scent.','10 oz','40h',1,20.00,27.00,'2026-03-16 02:16:04','2026-03-16 02:16:04'),(9,'COFF','Coffee','Coffee scented candles smell like real coffee.','12 oz','45h',1,21.00,28.00,'2026-03-16 02:16:06','2026-03-16 02:16:06'),(10,'COTT','Cotton Candy','Cotton candy candles smell super sweet.','10 oz','37h',1,22.00,26.00,'2026-03-16 02:16:08','2026-03-16 02:16:08'),(11,'FLM2','LED remote','LED candles can sometimes be controlled with remotes.','5 oz','10000h',2,3.00,6.00,'2026-03-16 02:16:10','2026-03-16 02:16:10'),(12,'FLM3','LED small','LED candles that are small.','6 oz','10000h',2,4.00,8.00,'2026-03-16 02:16:11','2026-03-16 02:16:11'),(13,'FLM4','LED flicker','LED candles that can flicker realistically.','7 oz','10000h',2,5.00,9.00,'2026-03-16 02:16:12','2026-03-16 02:16:12'),(14,'CLR','Clear','Candles can be clear with designs inside.','10 oz','40h',3,20.00,28.00,'2026-03-16 02:16:13','2026-03-16 02:16:13'),(15,'CRVD','Hand Carved','Candles that have hand carved designs in them.','12 oz','50h',3,25.00,35.00,'2026-03-16 02:16:14','2026-03-16 02:16:14'),(16,'DP','Dr Pepper','This candle smells like the soda.','10 oz','40h',1,20.00,25.00,'2026-03-16 06:48:57','2026-03-16 06:48:57');
 /*!40000 ALTER TABLE `candles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -76,7 +76,7 @@ CREATE TABLE `candles_types` (
 
 LOCK TABLES `candles_types` WRITE;
 /*!40000 ALTER TABLE `candles_types` DISABLE KEYS */;
-INSERT INTO `candles_types` VALUES (1,'SCNT','Scented','A1','2026-02-28 16:05:28','2026-02-28 16:05:28'),(2,'LED','LED','B2','2026-02-28 15:42:42','2026-02-28 15:42:42'),(3,'DECO','Decorative','C3','2026-02-28 16:18:41','2026-02-28 16:18:41');
+INSERT INTO `candles_types` VALUES (1,'SCNT','Scented','A1','2026-03-16 00:52:18','2026-03-16 00:52:18'),(2,'LED','LED','B2','2026-03-16 00:52:20','2026-03-16 00:52:20'),(3,'DECO','Decorative','C3','2026-03-16 00:52:21','2026-03-16 00:52:21'),(4,'OTDR','Outdoor','D4','2026-03-16 02:27:02','2026-03-16 02:27:02');
 /*!40000 ALTER TABLE `candles_types` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,7 +99,7 @@ CREATE TABLE `candles_users` (
   `date_time_updated` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`candles_user_id`),
   UNIQUE KEY `email_address` (`email_address`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -121,4 +121,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-02-28 11:21:29
+-- Dump completed on 2026-03-15 23:57:49
