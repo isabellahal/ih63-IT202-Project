@@ -1,16 +1,16 @@
 <?php
 require_once('candles.php');
-$candlesID = $_POST['candlesID'];
+$candlesID = filter_input(INPUT_POST, 'candlesID', FILTER_VALIDATE_INT);
 if ((trim($candlesID) == '') or (!is_numeric($candlesID))) {
    echo "<h2>Sorry, you must enter a valid candle </h2>\n";
 } else if (Candles::findCandles($candlesID)) {
   echo "<h2>Sorry, A candle with the ID #$candlesID already exists</h2>\n";
 } else {
-   $candlesName = $_POST['candlesName'];
-   $candlesCode = $_POST['candlesCode'];
-   $candlesDescription = $_POST['candlesDescription'];
-   $candlesSize = $_POST['candlesSize'];
-   $candlesBurnTime = $_POST['candlesBurnTime'];
+   $candlesName = htmlspecialchars($_POST['candlesName']);
+   $candlesCode = htmlspecialchars($_POST['candlesCode']);
+   $candlesDescription = htmlspecialchars($_POST['candlesDescription']);
+   $candlesSize = htmlspecialchars($_POST['candlesSize']);
+   $candlesBurnTime = htmlspecialchars($_POST['candlesBurnTime']);
    $candlestypeID = !empty($_POST['candlestypeID']) ? $_POST['candlestypeID'] : NULL;
    $candlesBuyPrice = $_POST['candlesBuyPrice'];
    $candlesSellPrice = $_POST['candlesSellPrice'];

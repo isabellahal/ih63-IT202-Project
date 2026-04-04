@@ -2,13 +2,12 @@
 
  error_log('$_POST ' . print_r($_POST, true));
  require_once('database.php');
-
  $emailAddress = $_POST['email_address'];
  $password = $_POST['password'];
-
+ if (filter_var($emailAddress, FILTER_VALIDATE_EMAIL)) {
  $query = "SELECT first_name, last_name, pronouns, phone_number FROM candles_users " .
         "WHERE email_address = ? AND password = SHA2(?,256)";
- 
+
  $db = getDB(true);
 
  if ($db === null) {
@@ -37,7 +36,11 @@
 
    header("Location: index.php");
  } else {
-   echo "<h2>Sorry,login incorrect for Candles</h2>\n";
+   echo "<h2>Sorry, login incorrect</h2>\n";
    echo "<a href=\"index.php\">Please try again</a>\n";
+ }
+ } else {
+   echo "<h2>Please enter a valid email address</h2>\n";
+   echo '<a href="index.php">Please try again</a>';
  }
 ?>

@@ -9,7 +9,7 @@ if (!isset($_POST['candlesID']) or (!is_numeric($_POST['candlesID']))) {
   $candle = Candles::findCandles($candleID);
   if ($candle) {
   ?>
-    <h2>Update Candle <?php echo $candle->candlesID; ?></h2><br>
+    <h2>Update Candle <?php echo htmlspecialchars($candle->candlesID); ?></h2><br>
     <form name="candles" action="index.php" method="post">
       <table>
         <tr>
@@ -18,24 +18,23 @@ if (!isset($_POST['candlesID']) or (!is_numeric($_POST['candlesID']))) {
         </tr>
         <tr>
           <td>Candle Code</td>
-          <td><input type="text" name="candlesCode" value="<?php echo $candle->candlesCode; ?>"></td>
+          <td><input type="text" name="candlesCode" value="<?php echo htmlspecialchars($candle->candlesCode); ?>"></td>
         </tr>
         <tr>
-        <tr>
           <td>Name</td>
-          <td><input type="text" name="candlesName" value="<?php echo $candle->candlesName; ?>"></td>
+          <td><input type="text" name="candlesName" value="<?php echo htmlspecialchars($candle->candlesName); ?>"></td>
         </tr>
         <tr>
           <td>Description</td>
-          <td><input type="text" name="candlesDescription" value="<?php echo $candle->candlesDescription; ?>"></td>
+          <td><input type="text" name="candlesDescription" value="<?php echo htmlspecialchars($candle->candlesDescription); ?>" minlength="100" maxlength="255" required></td>
         </tr>
         <tr>
           <td>Size</td>
-          <td><input type="text" name="candlesSize" value="<?php echo $candle->candlesSize; ?>"></td> 
+          <td><input type="text" name="candlesSize" value="<?php echo htmlspecialchars($candle->candlesSize); ?>" min="1" max="50" required></td> 
         </tr>
         <tr>
           <td>Burn Time</td>
-          <td><input type="text" name="candlesBurnTime" value="<?php echo $candle->candlesBurnTime; ?>"></td>
+          <td><input type="text" name="candlesBurnTime" value="<?php echo htmlspecialchars($candle->candlesBurnTime); ?>" min="1" max="50" required></td>
         </tr>
         <tr>
           <td>Candle Type:</td>
@@ -57,7 +56,7 @@ if (!isset($_POST['candlesID']) or (!is_numeric($_POST['candlesID']))) {
         <td>Buy Price</td>
         <td>
         <input type="text" name="candlesBuyPrice"
-        value="<?php echo $candle->candlesBuyPrice; ?>">
+        value="<?php echo $candle->candlesBuyPrice; ?>" min="1" max="200" step="0.01" reuired>
         </td>
         </tr>
 
@@ -65,7 +64,7 @@ if (!isset($_POST['candlesID']) or (!is_numeric($_POST['candlesID']))) {
         <td>Sell Price</td>
         <td>
         <input type="text" name="candlesSellPrice"
-        value="<?php echo $candle->candlesSellPrice; ?>">
+        value="<?php echo $candle->candlesSellPrice; ?>" min="1" max="200" step="0.01" required>
         </td>
         </tr>
       </table><br><br>
