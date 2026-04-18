@@ -5,8 +5,8 @@ if (!isset($_POST['candlesID']) or (!is_numeric($_POST['candlesID']))) {
   <a href="index.php?content=listcandles">List Candles</a>
   <?php
 } else {
-  $candleID = $_POST['candlesID'];
-  $candle = Candles::findCandles($candleID);
+  $candlesID = $_POST['candlesID'];
+  $candle = Candles::findCandles($candlesID);
   if ($candle) {
   ?>
     <h2>Update Candle <?php echo htmlspecialchars($candle->candlesID); ?></h2><br>
@@ -70,15 +70,19 @@ if (!isset($_POST['candlesID']) or (!is_numeric($_POST['candlesID']))) {
       </table><br><br>
       <input type="submit" name="answer" value="Update Candle">
       <input type="submit" name="answer" value="Cancel">
-      <input type="hidden" name="candlesID" value="<?php echo $candleID; ?>">
-      <input type="hidden" name="content" value="changecandle">
+      <input type="hidden" name="candlesID" value="<?php echo $candlesID; ?>">
+      <input type="hidden" name="content" value="changecandles">
     </form>
   <?php
   } else {
   ?>
-    <h2>Sorry, candle <?php echo $candleID; ?> not found</h2>
+    <h2>Sorry, candle <?php echo $candlesID; ?> not found</h2>
     <a href="index.php?content=listcandles">List Candles</a>
     <?php
   }
 }
 ?>
+<script language="javascript">
+   document['candles']['candlesCode'].focus();
+   document['candles']['candlesCode'].select();
+</script>

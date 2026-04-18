@@ -95,6 +95,19 @@ class CandlesType
            return NULL;
        }
    }
+
+   static function getTotalCandlesType()
+{
+   $db = getDB();
+   $query = "SELECT COUNT(candles_type_id) AS total FROM candles_types";
+   $result = $db->query($query);
+   $row = $result->fetch_array();
+   if ($row) {
+       return $row['0'];
+   } else {
+       return NULL;
+   }
+}
    
    function updateCandlesType()
    {
@@ -121,4 +134,3 @@ class CandlesType
        return $result;
    }
 }
-?>

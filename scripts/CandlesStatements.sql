@@ -16,6 +16,7 @@ CREATE TABLE candles (
         ON DELETE SET NULL
         ON UPDATE CASCADE
 );
+
 INSERT INTO candles
 (candles_id, candles_code, candles_name, candles_description, candles_size, candles_burn_time, candles_type_id, candles_buy_price, candles_sell_price)
 VALUES

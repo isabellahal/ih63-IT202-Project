@@ -15,7 +15,7 @@
           <td><strong>Types</strong></td>
         </tr>
         <tr>
-          <td>&nbsp;&nbsp;&nbsp;<a href="index.php?content=listcandletypes">
+          <td>&nbsp;&nbsp;&nbsp;<a href="index.php?content=listcandlestype">
               <strong>List Candle Types</strong></a></td>
         </tr>
         <tr>

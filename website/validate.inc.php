@@ -8,14 +8,7 @@
  $query = "SELECT first_name, last_name, pronouns, phone_number FROM candles_users " .
         "WHERE email_address = ? AND password = SHA2(?,256)";
 
- $db = getDB(true);
-
- if ($db === null) {
-  echo "<h2>Database connection failed</h2>\n";
-  echo "<a href=\"index.php\">Please try again</a>\n";
-  exit;
-}
-
+ $db = getDB();
  $stmt = $db->prepare($query);
  $stmt->bind_param("ss", $emailAddress, $password);
  $stmt->execute();
@@ -25,6 +18,8 @@
 
  $stmt->close();
  $db->close();
+
+  $name = "$firstName $lastName";
 
  if ($fetched) {
   $_SESSION['login'] = true;

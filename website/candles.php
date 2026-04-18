@@ -130,6 +130,45 @@ class Candles
            return NULL;
        }
    }
+
+   static function getTotalCandles()
+{
+   $db = getDB();
+   $query = "SELECT COUNT(candles_id) AS total FROM candles";
+   $result = $db->query($query);
+   $row = $result->fetch_array();
+   if ($row) {
+       return $row[0];
+   } else {
+       return NULL;
+   }
+}
+
+static function getTotalBuyPrice()
+{
+   $db = getDB();
+   $query = "SELECT SUM(candles_buy_price) AS total FROM candles";
+   $result = $db->query($query);
+   $row = $result->fetch_array();
+   if ($row) {
+       return $row[0];
+   } else {
+       return NULL;
+   }
+}
+   
+static function getTotalListPrice()
+{
+   $db = getDB();
+   $query = "SELECT SUM(candles_sell_price) AS total FROM candles";
+   $result = $db->query($query);
+   $row = $result->fetch_array();
+   if ($row) {
+       return $row[0];
+   } else {
+       return NULL;
+   }
+}
    
    function updateCandle()
    {
@@ -195,4 +234,3 @@ static function getCandlesByType($candlestypeID)
        }
    }
 }
-?>
