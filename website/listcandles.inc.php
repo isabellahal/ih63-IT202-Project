@@ -29,13 +29,12 @@ if ($candles) {
      $candleID = $candle->candlesID;
      $candlesCode = $candle->candlesCode;
      $candleName = $candle->candlesName;
-     $candleDescription = $candle->candlesDescription;
      $candleSize = $candle->candlesSize;
      $candleBurnTime = $candle->candlesBurnTime;
      $candleBuyPrice = $candle->candlesBuyPrice;
      $candleSellPrice = $candle->candlesSellPrice;
      $candleType = $candle->candlestypeID;
-     $option = $candleID . " - " . $candlesCode . " - " . $candleName . " - " . $candleDescription . " - " . $candleSize . " - " . $candleBurnTime . " - " . $candleType . " - " . $candleBuyPrice . " - " . $candleSellPrice;
+     $option = $candleID . " - " . $candlesCode . " - " . $candleName . " - " . $candleSize . " - " . $candleBurnTime . " - " . $candleType . " - " . $candleBuyPrice . " - " . $candleSellPrice;
      echo "$option<br>";
            if($first) {
                 echo "<option value=\"$candleID\" selected>$option</option>\n";

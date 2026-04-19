@@ -1,7 +1,7 @@
 <?php
 error_log('$_POST ' . print_r($_POST, true));
 require_once("candlestype.php");
-$candlestypeID = $_POST['candles_type_id'];
+$candlestypeID = $_POST['candlestypeID'];
 if (isset($_SESSION['login'])) {
 if ((trim($candlestypeID) == '') or (!is_numeric($candlestypeID))) {
    echo "<h2>Sorry, you must enter a valid candle type</h2>\n";

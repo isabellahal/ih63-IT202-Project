@@ -41,7 +41,7 @@ footer {
    font-family: Georgia, 'Times New Roman', Times, serif;
    font-size: 80%;
    background-color: #861657;
-   color: white;
+   color: #FCF0CC;
    padding: 5px;
    border-top: 3px solid #FCF0CC;
    border-bottom: 3px solid #FCF0CC;
@@ -63,6 +63,7 @@ main td {
 }
 header {
    padding: 5px;
+   border-right: 1px solid #FCF0CC;
    border-bottom: 3px solid #FCF0CC;
    height: 40px;
    width: 100%;
@@ -70,10 +71,11 @@ header {
 
 .navigation {
    padding: 5px;
-   border-bottom: 1px solid #FCF0CC;
-   border-right: 1px solid #FCF0CC;
-   border-top: 1px solid #FCF0CC;
-   border-left: 5px solid #FCF0CC;
+   border-bottom: 1px solid #D56AA0;
+   border-right: 1px solid #D56AA0;
+   border-top: 1px solid #D56AA0;
+   border-left: 1px solid #D56AA0;
+   border-radius: 15px;
    color: #FCF0CC;
    background-color: #A64253;
    width: 20%;
@@ -85,7 +87,7 @@ footer {
  width: 100%;
 }
 a, a:link {
-  color: #A64253;
+  color: #BBDBB4;
 }
 
 a:active {
@@ -111,9 +113,9 @@ nav a:active {
 }
 
 input {
- border: 2px solid #A64253;
+ border: 2px solid #861657;
  background-color: white;
- color: #A64253;
+ color: #861657;
  border-radius: 5px;
 }
 
@@ -124,12 +126,12 @@ input[type=submit] {
 
 input:required:invalid {
  border-color: #A64253;
- background-color: #FCF0CC;
+ background-color: white;
 }
 
 input:required:valid {
  border-color: #D56AA0;
- background-color: #FCF0CC;
+ background-color: white;
 }
 
 input:focus {

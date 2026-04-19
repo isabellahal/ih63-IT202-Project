@@ -2,7 +2,7 @@
 if (!isset($_REQUEST['candlestypeID']) or (!is_numeric($_REQUEST['candlestypeID']))) {
 ?>
  <h2>You did not select a valid Candle Type to view.</h2>
- <a href="index.php?content=listcandlestypes">List Candle Types</a>
+ <a href="index.php?content=listcandlestype">List Candle Types</a>
  <?php
 } else {
  $candlestypeID = $_REQUEST['candlestypeID'];
@@ -47,6 +47,6 @@ if (!isset($_REQUEST['candlestypeID']) or (!is_numeric($_REQUEST['candlestypeID'
    }
  } else {
    echo "<h2>Sorry, candle type $candlestypeID not found</h2>\n";
+    echo "<a href='index.php?content=listcandlestype'>List Candle Types</a>";
  }
 }
-?>

@@ -27,7 +27,7 @@
         </tr>
     
         <tr>
-            <td>Candle:</td>
+            <td>Candle Type:</td>
             <td><select name="candles_type_id">
                     <?php
                     echo "<option value=\"0\">Select a Candle</option>\n";

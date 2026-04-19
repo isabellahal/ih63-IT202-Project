@@ -7,31 +7,31 @@
          echo "<td><h3>Welcome, {$_SESSION['firstName']}</h3></td>";
          ?>
         <tr>
-          <td><img src="images/home.png" alt="Home Icon" width="12" height="12">&nbsp;
-          <td><a href="index.php"><strong>Home</strong></a></td>
+          <td><img src="images/home.png" alt="Home Icon" width="12" height="12">
+          <a href="index.php"><strong>Home</strong></a></td>
         </tr>
         <tr>
-          <td><img src="images/categories.png" alt="Categories Icon" width="12" height="12">&nbsp;
-          <td><strong>Types</strong></td>
+          <td><img src="images/categories.png" alt="Categories Icon" width="12" height="12">
+          <strong>Types</strong></a></td>
         </tr>
         <tr>
-          <td>&nbsp;&nbsp;&nbsp;<a href="index.php?content=listcandlestype">
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php?content=listcandlestype">
               <strong>List Candle Types</strong></a></td>
         </tr>
         <tr>
-          <td>&nbsp;&nbsp;&nbsp;<a href="index.php?content=newcandletype">
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php?content=newcandletype">
               <strong>Add New Candle Type</strong></a></td>
         </tr>
         <tr>
-                    <td><img src="images/items.png" alt="Items Icon" width="12" height="12">&nbsp;
-          <td><strong>Candles</strong></td>
+                    <td><img src="images/items.png" alt="Items Icon" width="12" height="12">
+          <strong>Candles</strong></td>
         </tr>
         <tr>
-          <td>&nbsp;&nbsp;&nbsp;<a href="index.php?content=listcandles">
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php?content=listcandles">
               <strong>List Candles</strong></a></td>
         </tr>
         <tr>
-          <td>&nbsp;&nbsp;&nbsp;<a href="index.php?content=newcandle">
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php?content=newcandle">
               <strong>Add New Candle</strong></a></td>
         </tr>
         <tr>
@@ -41,7 +41,7 @@
         </tr>
         <tr>
           <td><a href="index.php?content=logout">
-            <img src="images/logout.png" alt="Logout Icon" width="12" height="12">&nbsp;
+            <img src="images/logout.png" alt="Logout Icon" width="12" height="12">
               <strong>Logout</strong></a></td>
         </tr>
         <tr>
